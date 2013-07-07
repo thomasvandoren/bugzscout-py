@@ -15,7 +15,9 @@ Installation
 Supported python versions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* FIXME
+* 2.7
+* 3.3
+* pypy
 
 Getting Started
 ---------------
