@@ -29,4 +29,9 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: Implementation :: PyPy',
         ],
+    entry_points    ={
+        'console_scripts': [
+            'bugzscout=bugzscout.ext.cli:main'
+            ]
+        }
     )
