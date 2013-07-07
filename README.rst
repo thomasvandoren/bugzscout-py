@@ -23,6 +23,11 @@ Getting Started
 .. code-block:: pycon
 
     >>> import bugzscout
+    >>> b = bugzscout.BugzScout('http://fogbugz/scoutSubmit.asp',
+                                'fb-user',
+                                'the-project',
+                                'the-area')
+    >>> b.submit_error('An eror occurred of type blah', extra='Extra info')
 
 License
 -------

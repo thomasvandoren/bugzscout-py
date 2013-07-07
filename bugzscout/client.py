@@ -50,7 +50,7 @@ class BugzScout(object):
         investigating the case has access to them.
 
         When extra is not specified, bugzscout will increase the number of
-        occurrence for the case with the given description, but it will not
+        occurrences for the case with the given description, but it will not
         include an entry for it (unless it is a new case).
 
         :param description: string description for error
