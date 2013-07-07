@@ -31,6 +31,23 @@ Getting Started
                                 'the-area')
     >>> b.submit_error('An eror occurred of type blah', extra='Extra info')
 
+Command Line Interface
+~~~~~~~~~~~~~~~~~~~~~~
+
+There is a command line interface for submitting errors. To simplify submitting
+multpile errors, the FogBugz configuration can be set in the environment.
+
+.. code-block:: bash
+
+    # (Optional) Setup the environment.
+    export BUGZSCOUT_URL=http://fogbugz/scoutSubmit.asp
+    export BUGZSCOUT_USER=errors
+    export BUGZSCOUT_PROJECT='My Project'
+    export BUGZSCOUT_AREA=Errors
+
+    # Submit a new error.
+    bugzscout --extra 'Extra data for the case...' 'The description of the error.'
+
 License
 -------
 BSD
