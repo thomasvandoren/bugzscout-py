@@ -16,6 +16,9 @@ setup(
     keywords        =['BugzScout', 'FogBugz'],
     license         ='BSD',
     packages        =find_packages(exclude=('test',)),
+    install_requires=[
+        'requests',
+        ],
     classifiers     =[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

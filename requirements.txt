@@ -1,3 +1,5 @@
+requests
+
 # Test dependencies.
 mock
 nose
