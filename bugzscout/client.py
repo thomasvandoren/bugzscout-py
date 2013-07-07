@@ -10,6 +10,7 @@ import requests
 
 LOG = logging.getLogger('bugzscout.client')
 
+
 class BugzScout(object):
     __doc__ = __doc__
 
@@ -17,7 +18,8 @@ class BugzScout(object):
         """Initialize a new instance of bugzscout client.
 
         :param url: string URL for bugzscout
-        :param user: string fogbugz user to designate when submitting via bugzscout
+        :param user: string fogbugz user to designate when submitting
+                     via bugzscout
         :param project: string fogbugz project to designate for cases
         :param area: string fogbugz area to designate for cases
         """
@@ -44,8 +46,8 @@ class BugzScout(object):
         case. It is advisable to remove personal info from the description for
         that reason. Account ids, emails, request ids, etc, will make the
         occurrence counting builtin to bugzscout less useful. Those values
-        should go in the extra parameter, though, so the developer investigating
-        the case has access to them.
+        should go in the extra parameter, though, so the developer
+        investigating the case has access to them.
 
         When extra is not specified, bugzscout will increase the number of
         occurrence for the case with the given description, but it will not
@@ -58,22 +60,27 @@ class BugzScout(object):
         req_data = {'ScoutUserName':       self.user,
                     'ScoutProject':        self.project,
                     'ScoutArea':           self.area,
-                    'Description':         description,  # When this matches, cases are grouped together.
+
+                    # When this matches, cases are grouped together.
+                    'Description':         description,
                     'Extra':               extra,
-                    'ForceNewBug':         0,  # 1 forces a new bug to be created.
+
+                    # 1 forces a new bug to be created.
+                    'ForceNewBug':         0,
                     'ScoutDefaultMessage': default_message,
-                    'FriendlyResponse':    0,  # 0 sends XML response, 1 sends HTML response.
+
+                    # 0 sends XML response, 1 sends HTML response.
+                    'FriendlyResponse':    0,
                     }
 
         LOG.debug('Making bugzscout request to {0} with body {1}'.format(
-                self.url, req_data))
+            self.url, req_data))
         resp = requests.post(self.url, data=req_data)
         LOG.debug('Response from bugzscout request: {0} body:\n{1}'.format(
-                resp, resp.content))
+            resp, resp.content))
 
         if resp.ok:
             LOG.info('Successfully submitted error to bugzscout.')
         else:
             LOG.warn('Failed to submit error to bugzscout: {0}'.format(
-                    resp.reason))
-
+                resp.reason))
