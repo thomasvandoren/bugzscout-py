@@ -1,0 +1,10 @@
+language: python
+python:
+  - "2.7"
+  - "3.3"
+  - "pypy"
+script:
+  - "nosetests --verbose test"
+  - "pep8 --show-source bugzscout test"
+notifications:
+  email: thomas.vandoren@gmail.com
