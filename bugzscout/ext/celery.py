@@ -60,7 +60,8 @@ class _AsyncHandler(threading.local):
         client = bugzscout.BugzScout(*init_args)
 
         LOG.debug('Submitting BugzScout error.')
-        client.submit_error(description, extra=extra, default_message=default_message)
+        client.submit_error(
+            description, extra=extra, default_message=default_message)
 
     @classmethod
     def _bugzscout_init_args(cls, url, user, project, area):
