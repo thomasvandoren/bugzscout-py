@@ -48,7 +48,7 @@ class _AsyncHandler(threading.local):
     @classmethod
     def submit_error(cls, description, extra=None, default_message=None,
                      bugzscout_url=None, bugzscout_user=None,
-                     buzscout_project=None, bugzscout_area=None):
+                     bugzscout_project=None, bugzscout_area=None):
         """FIXME"""
         if cls.celery is None:
             raise RuntimeError('Please call intialize with a celery '
