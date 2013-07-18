@@ -6,15 +6,21 @@
 from __future__ import print_function, unicode_literals
 
 import bugzscout
-import celery
 import logging
 import threading
+
+try:
+    import celery
+except ImportError as ex:
+    raise ImportError(
+        'celery must be installed to use this extension: {0}'.format(
+            ex.message))
 
 LOG = logging.getLogger('buzscout.ext.celery')
 
 
-class _AsyncHandler(threading.local):
-    """FIXME"""
+class CeleryHandler(threading.local):
+    __doc__ = __doc__
 
     celery = None
     default_url = None
@@ -49,7 +55,22 @@ class _AsyncHandler(threading.local):
     def submit_error(cls, description, extra=None, default_message=None,
                      bugzscout_url=None, bugzscout_user=None,
                      bugzscout_project=None, bugzscout_area=None):
-        """FIXME"""
+        """Creates a new bugzscout instance and call submit_error on it.
+
+        Raises RuntimeError if initialize has not been called on the class.
+
+        Default versions of url, user, project, and area are used if not set
+        here.
+
+        :param description: string description for error
+        :param extra: string details for error
+        :param default_message: string default message to return in responses
+o        :param bugzscout_url: string URL for bugzscout
+        :param bugzscout_user: string fogbugz user to designate when submitting
+                             via bugzscout
+        :param bugzscout_project: string fogbugz project to designate for cases
+        :param bugzscout_area: string fogbugz area to designate for cases
+        """
         if cls.celery is None:
             raise RuntimeError('Please call intialize with a celery '
                                'instance before submitting errors.')
