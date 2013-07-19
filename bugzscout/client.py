@@ -8,6 +8,8 @@ from __future__ import print_function, unicode_literals
 import logging
 import requests
 
+__all__ = ('BugzScout',)
+
 LOG = logging.getLogger('bugzscout.client')
 
 
