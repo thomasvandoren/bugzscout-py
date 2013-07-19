@@ -15,8 +15,8 @@ Installation
 Supported python versions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* 2.7
-* 3.3
+* 2.6, 2.7
+* 3.1, 3.2, 3.3
 * pypy
 
 Getting Started
