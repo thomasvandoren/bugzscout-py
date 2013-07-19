@@ -20,7 +20,7 @@ setup(
         'requests',
         ],
     classifiers     =[
-        'Development eStatus :: 3 - Alpha',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
