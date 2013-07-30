@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 
 setup(
     name            ='bugzscout',
-    version         ='0.0.1',
+    version         =open('VERSION', 'r').read(),
     description     ='Python interface for the FogBugz BugzScout API.',
     long_description=open('README.rst').read(),
     author          ='Thomas Van Doren',
