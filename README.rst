@@ -35,7 +35,7 @@ Command Line Interface
 ~~~~~~~~~~~~~~~~~~~~~~
 
 There is a command line interface for submitting errors. To simplify submitting
-multpile errors, the FogBugz configuration can be set in the environment.
+multiple errors, the FogBugz configuration can be set in the environment.
 
 .. code-block:: bash
 
