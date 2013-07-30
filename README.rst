@@ -10,7 +10,7 @@ Installation
 
 .. code-block:: bash
 
-    pip install bugzscout-py
+    pip install bugzscout
 
 Supported python versions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
