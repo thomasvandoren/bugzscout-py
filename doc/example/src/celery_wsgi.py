@@ -27,7 +27,7 @@ def _handle_exc(exception):
     """
     # Set the description to a familiar string with the exception
     # message. Add the stack trace to extra.
-    bugzscout.ext.celery_app.submit_error(
+    bugzscout.ext.celery_app.submit_error.delay(
         'http://fogbugz/scoutSubmit.asp',
         'error-user',
         'MyAppProject',
