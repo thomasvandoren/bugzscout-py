@@ -15,6 +15,7 @@ Contents:
 
    intro
    reference
+   example/index
 
 
 Indices and tables
