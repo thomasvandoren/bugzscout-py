@@ -18,7 +18,7 @@ A simple paste WSGI server that can handle HTTP requests is:
     :end-before: import bugzscout
     :linenos:
 
-To this server:
+To run this server:
 
 .. code-block:: bash
 
