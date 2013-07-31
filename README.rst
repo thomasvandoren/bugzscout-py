@@ -29,7 +29,7 @@ Getting Started
                                 'fb-user',
                                 'the-project',
                                 'the-area')
-    >>> b.submit_error('An eror occurred of type blah', extra='Extra info')
+    >>> b.submit_error('An error occurred of type blah', extra='Extra info')
 
 Command Line Interface
 ~~~~~~~~~~~~~~~~~~~~~~
