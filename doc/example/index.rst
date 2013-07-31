@@ -5,3 +5,4 @@ Examples Uses of BugzScout
     :maxdepth: 2
 
     simple_wsgi
+    celery_wsgi

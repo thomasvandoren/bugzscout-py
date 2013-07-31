@@ -5,7 +5,8 @@ This example describes how to add synchronous BugScout reporting to a WSGI
 app. This is **not** intended for production use. It's purpose is to show how
 easy it is to add this kind of reporting.
 
-An example that is suitable for production is the :doc: `FIXME <FIXME>`.
+An example that is suitable for production is the :doc:`celery extension
+example <celery_wsgi>`.
 
 This example uses the `Paste <http://pythonpaste.org/>`_ python package.
 
@@ -28,7 +29,7 @@ Making requests to ``http://localhost:5000/`` will respond with a 200 OK and
 'Hellow world!' in the body.
 
 Adding BugzScout
-~~~~~~~~~~~~~~~~
+----------------
 
 When errors occur in this code, it would be great to report them to
 BugzScout. In order to so, wrap the contents of the ``app`` function in a
