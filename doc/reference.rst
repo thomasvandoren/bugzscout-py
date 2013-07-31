@@ -4,6 +4,7 @@ Reference
 BugzScout
 ---------
 
+.. automodule:: bugzscout
 .. autoclass:: bugzscout.BugzScout
     :members:
     :special-members: __init__
