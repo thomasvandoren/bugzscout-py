@@ -1,6 +1,9 @@
 Reference
 =========
 
+BugzScout
+---------
+
 .. autoclass:: bugzscout.BugzScout
     :members:
     :special-members: __init__

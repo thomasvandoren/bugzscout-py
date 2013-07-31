@@ -15,6 +15,7 @@ Contents:
 
    intro
    reference
+   cli
    example/index
 
 
