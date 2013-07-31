@@ -5,6 +5,9 @@ Python interface for the FogBugz BugzScout API.
 .. image:: https://travis-ci.org/thomasvandoren/bugzscout-py.png?branch=master
     :target: https://travis-ci.org/thomasvandoren/bugzscout-py
 
+`Full Documentation <https://bugzscout.readthedocs.org/>`_ is available on
+ReadTheDocs.
+
 Installation
 ------------
 
