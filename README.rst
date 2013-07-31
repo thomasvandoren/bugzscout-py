@@ -51,6 +51,9 @@ multiple errors, the FogBugz configuration can be set in the environment.
     # Submit a new error.
     bugzscout --extra 'Extra data for the case...' 'The description of the error.'
 
+See the `BugzScout Command Line Interface
+<https://bugzscout.readthedocs.org/en/latest/cli.html>`_ docs for more detail.
+
 Celery
 ~~~~~~
 
@@ -83,6 +86,10 @@ celery instance. For example:
 
     export CELERY_CONFIG_MODULE=celeryconfig
     celery worker --app=bugzscout.ext.celery_app
+
+See the `Celery example
+<https://bugzscout.readthedocs.org/en/latest/example/celery_wsgi.html>`_ in the
+docs for more detail.
 
 License
 -------
