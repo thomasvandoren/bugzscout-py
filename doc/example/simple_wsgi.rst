@@ -17,7 +17,6 @@ A simple paste WSGI server that can handle HTTP requests is:
 
 .. literalinclude:: src/simple_wsgi.py
     :end-before: import bugzscout
-    :linenos:
 
 To run this server:
 
@@ -39,7 +38,6 @@ This example creates a new function, ``bugzscout_app``, that does just that.
 
 .. literalinclude:: src/simple_wsgi.py
     :start-after: paste.httpserver.serve
-    :linenos:
 
 The same ``__main__`` block from above can be used, substituting
 ``bugzscout_app`` for ``app``. When an error is thrown during a request, it

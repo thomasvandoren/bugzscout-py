@@ -8,12 +8,24 @@ FogBugz server during another request. It is much more performant to do so
 asynchronously.
 
 `Celery <http://celeryproject.org/>`_ is an asynchronous task queue that
-supports several backend implementation, like AMQP. The bugzscout package comes
-with a Celery extension that has a flexible configuration.
+supports several backend implementations, like AMQP. The bugzscout package
+comes with a Celery extension that has a flexible configuration.
 
 The celery extension is the recommended way to submit errors in production
 environments. This example describes how to setup and use the celery extension
 in the context of a WSGI server application.
+
+Prerequisite
+------------
+
+The `celery package <https://pypi.python.org/pypi/celery>`_ needs to be
+installed in the current environment before this will work. Celery is not
+declared as a dependency, since it can be bulky and it is not needed to use the
+core bugzscout functionality.
+
+.. code-block:: bash
+
+    pip install celery
 
 Celery setup
 ------------
@@ -75,6 +87,19 @@ When an error is thrown while processing a request, this app will:
 
 At this point, each error is creating a new celery task. There needs to be a
 celery worker present to consume those tasks.
+
+Configuring celery
+------------------
+
+The celery instance can be configured `as described in the celery docs
+<http://docs.celeryproject.org/en/latest/userguide/application.html#configuration>`_. For
+example, it can be configured to use a rabbitmq-server as a broker with:
+
+.. code-block:: python
+
+    celery.conf.update(
+        BROKER_URL='amqp://user:pass@rabbitmq-server:5672//'
+    )
 
 Celery worker setup
 -------------------
